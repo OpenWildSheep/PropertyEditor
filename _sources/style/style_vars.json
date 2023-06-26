@@ -1,0 +1,12 @@
+{
+  "@background-darker": "#222",
+  "@background-base": "#333",
+  "@background-alternate": "#363636",
+  "@background-lighter": "#444",
+  "@background-widget": "#555",
+  "@border-dark": "#222",
+  "@text-light": "#CCC",
+  "@text-dark": "#333",
+  "@button-hover": "orange",
+  "@button-radius": "5px"
+}
