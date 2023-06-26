@@ -1,0 +1,315 @@
+
+QMainWindow, QDialog {
+    background-color: @background-base;
+    color: @text-light;
+    show-decoration-selected: 1;
+}
+
+ColorPicker {
+    background-color: @background-base;
+}
+
+EditorTab, QTabWidget::tab-bar, QTabBar::tab, QTabBar::Tab:!selected {
+    background-color: @background-base;
+    color: @text-light;
+}
+
+QTabBar::tab{
+    border-right: 2px solid #222;
+    border-bottom: 2px solid #222;
+    padding: 5px;
+}
+
+QTabBar::Tab:selected {
+    background: @button-hover;
+    color: @text-dark;
+}
+
+QTabBar::tear, QTabBar::scroller {
+    background: @background-base;
+}
+
+QTabWidget::pane {
+    background-color: @background-base;
+    border: 1px solid @background-base;
+}
+
+QLabel {
+    background: @background-base;
+    color: @text-light;
+    border: 1px solid @background-darker;
+    height: 20px;
+}
+
+QInputDialog, QMessageBox {
+    background: @background-base;
+    color: @text-light;
+}
+
+QMessageBox QPushButton {
+    padding: 10px;
+}
+
+QSpinBox, QDoubleSpinBox {
+    color: @text-light;
+    background-color: @background-lighter;
+    border: 1px solid @background-darker;
+}
+
+EditorButton {
+    padding: 2px 5px;
+}
+
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+    border: none;
+}
+
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+    border: none;
+}
+
+QSpinBox::up-arrow, QDoubleSpinBox::up-arrow {
+    image: url(icons:arrow_top.png);
+     width: 7px;
+     height: 5px;
+}
+
+QSpinBox::down-arrow, QDoubleSpinBox::down-arrow {
+    image: url(icons:arrow_down.png);
+     width: 7px;
+     height: 5px;
+}
+
+QComboBox {
+    color: @text-light;
+    background-color: @background-lighter;
+    border: none;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: url(icons:arrow_down.png);
+    width: 10px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid @background-darker;
+    selection-background-color: @background-darker;
+    color: @text-light;
+    background-color: @background-base;
+}
+
+QLineEdit {
+    color: @text-light;
+    background-color: @background-widget;
+    border: 1px solid @border-dark;
+    height: 20px;
+    padding-left: 2px;
+}
+
+QFrame {
+    outline: none;
+    border: none;
+}
+
+QTreeView {
+    background-color: @background-base;
+    color: @text-light;
+    border: none;
+    outline: none;
+    qproperty-indentation: 20;
+    alternate-background-color: @background-alternate;
+}
+
+QTreeView::item {
+    padding: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+QTreeView::item:focus {
+    border: none;
+}
+
+QTreeView::item:selected {
+    border: none;
+    color: @text-light;
+}
+
+QTreeView::item:selected:active{
+    border: none;
+    color: @text-light;
+}
+
+QTreeView::item:selected:!active {
+    border: none;
+    color: @text-light;
+}
+
+QTreeView::branch {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+        border-image: none;
+        image: url(icons:arrow_right.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+        border-image: none;
+        image: url(icons:arrow_down.png);
+}
+
+QHeaderView::section {
+    background-color: @background-base;
+    color: @text-light;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 2px solid @background-darker;
+    border-right: 2px solid @background-darker;
+}
+
+QPushButton {
+    background-color: @background-lighter;
+    color: @text-light;
+    border-radius: none;
+}
+
+QPushButton:hover {
+    background-color: @button-hover;
+    color: @text-dark;
+}
+
+QInputDialog QPushButton {
+    padding: 5px;
+}
+
+MenuButton, RemoveButton {
+    border-radius: @button-radius;
+}
+
+QSlider::groove:horizontal {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                            stop: 0.3 rgba(0, 0, 0, 0), stop: 0.31 @background-darker,
+                            stop: 0.67 #555, stop: 0.7 rgba(0, 0, 0, 0));
+	height: 14px;
+}
+
+QSlider::handle:horizontal {
+    border: 2px solid @background-base;
+	background: #555;
+	width: 10px;
+	height: 10px;
+	border-radius: 7px;
+}
+
+QSlider::add-page:horizontal {
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0.3 rgba(0, 0, 0, 0), stop: 0.31 @background-darker,
+                                stop: 0.67 #555, stop: 0.7 rgba(0, 0, 0, 0));
+height: 14px;
+}
+
+QSlider::sub-page:horizontal {
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0.3 rgba(0, 0, 0, 0), stop: 0.31 @background-darker,
+                                stop: 0.67 #FFA500, stop: 0.7 rgba(0, 0, 0, 0));
+    height: 14px;
+}
+
+NodeTreeView QComboBox, NodeTreeView QPushButton, NodeTreeView QLineEdit, NodeTreeView EditorSpinbox, NodeTreeView EditorDoubleSpinbox {
+    height: 20px;
+      border-radius: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+NodeTreeView QPushButton, NodeTreeView QLineEdit {
+
+}
+
+QMenu {
+    background-color: @background-base;
+    border: 1px solid @background-darker;
+    color: @text-light;
+}
+
+QMenu::item {
+    background-color: @background-base;
+}
+
+QMenu::item:selected {
+    background-color: @button-hover;
+    color: @text-dark;
+}
+
+
+QScrollBar:vertical {
+    border: none;
+    background: @background-base;
+    width: 20px;
+    margin-left: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: @background-lighter;
+    min-height: 20px;
+    width: 30px;
+    border: none;
+}
+
+QScrollBar::handle:vertical {
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical {
+    border: none;
+    height: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    border: none;
+    height: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background-color: @background-base;
+}
+
+
+QCheckBox {
+    spacing: 5px;
+}
+
+QCheckBox::indicator {
+    width: 15px;
+    height: 15px;
+    background-color: @background-lighter;
+    border: 1px solid @background-darker;
+}
+
+QCheckBox::indicator:checked {
+    image: url(icons:checked.png) ;
+}
+
+QColorDialog {
+    background: @background-base;
+    color: @text-light;
+}
+
+QDialog QPushButton {
+    height: 20px;
+}
